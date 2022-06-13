@@ -17,10 +17,7 @@ const initialState: UserEventsState = {
   allIds: [],
 };
 
-const userEventsReducer = (
-  state: UserEventsState = initialState,
-  action: AnyAction
-) => {
+const userEventsReducer = (state: UserEventsState = initialState, action: AnyAction) => {
   switch (action.type) {
     default:
       return state;
