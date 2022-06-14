@@ -21,13 +21,9 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
-    "prettier/react",
   ],
   rules: {},
 };
