@@ -11,7 +11,7 @@ const Recorder = () => {
   const dateStart = useSelector(selectDateStart);
   const started = dateStart !== "";
   const interval = useRef<number>(0);
-  const [count, setCount] = useState<number>(0);
+  const [_count, setCount] = useState<number>(0);
 
   const handleClick = () => {
     if (started) {
