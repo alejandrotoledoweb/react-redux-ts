@@ -40,7 +40,7 @@ const Recorder = () => {
 
   return (
     <div className={cx("recorder", { "recorder-started": started })}>
-      <button onClick={handleClick} className="recorder-record">
+      <button title="play/stop button" onClick={handleClick} className="recorder-record">
         <span></span>
       </button>
       <div className="recorder-counter">
