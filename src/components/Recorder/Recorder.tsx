@@ -6,7 +6,7 @@ import cx from "classnames";
 
 const addZero = (num: number) => (num < 10 ? `0${num}` : `${num}`);
 
-const Recorder = () => {
+const Recorder: React.FC = () => {
   const dispatch = useDispatch();
   const dateStart = useSelector(selectDateStart);
   const started = dateStart !== "";
