@@ -1,10 +1,10 @@
 import { combineReducers, legacy_createStore as createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import recorderReducer from "./recorder";
 import userEventsReducer from "./user-events";
+import recorderReducer from "./recorder";
 
 const rootReducer = combineReducers({
-  eventsEvents: userEventsReducer,
+  userEvents: userEventsReducer,
   recorder: recorderReducer,
 });
 

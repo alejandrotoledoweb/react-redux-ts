@@ -25,5 +25,12 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
   ],
-  rules: {},
+  rules: {
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        allowSingleExtends: true,
+      },
+    ],
+  },
 };
