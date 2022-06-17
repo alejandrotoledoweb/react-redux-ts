@@ -22,7 +22,7 @@ interface Props extends PropsFromRedux {}
 const createDateKey = (date: Date) => {
   const year = date.getUTCFullYear();
   const month = date.getUTCMonth() + 1;
-  const day = date.getUTCDate() + 1;
+  const day = date.getUTCDate();
   return `${year}-${addZero(month)}-${addZero(day)}`;
 };
 
@@ -84,7 +84,7 @@ const Calendar: React.FC<Props> = ({ events, loadUserEvents }) => {
             <div className="calendar-events">
               {events.map((event) => {
                 return (
-                  <div className="calendar-event" key={event.id}>
+                  <div className="calendar-event" key={dayKey}>
                     <div className="calendar-event-info">
                       <div className="calendar-event-time">10:00 - 12:00</div>
                       <div className="calendar-event-title">{event.title}</div>
