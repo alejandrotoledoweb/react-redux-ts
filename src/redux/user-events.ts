@@ -89,7 +89,7 @@ export const createUserEvent =
       type: CREATE_REQUEST,
     });
 
-    console.log("trying to create an event");
+    console.log(getState());
 
     try {
       const dateStart = selectDateStart(getState());
@@ -108,6 +108,7 @@ export const createUserEvent =
       });
 
       const createdEvent: UserEvent = await response.json();
+      console.log({ createdEvent });
 
       dispatch({
         type: CREATE_SUCCESS,
@@ -151,6 +152,10 @@ const userEventsReducer = (
 
     case CREATE_SUCCESS: {
       const { event } = action.payload;
+
+      const testAllIds = [...state.allIds, event.id];
+      const testByIds = { ...state.byIds, [event.id]: event };
+      console.log({ testAllIds, testByIds });
       return {
         ...state,
         allIds: [...state.allIds, event.id],
