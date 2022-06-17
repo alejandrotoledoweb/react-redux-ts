@@ -1,13 +1,14 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./Recorder.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import cx from "classnames";
 import { start, stop, selectDateStart } from "../../redux/recorder";
 import { addZero } from "../../lib/utils";
 import { createUserEvent } from "../../redux/user-events";
+import { useAppDispatch } from "../../hooks";
 
 const Recorder: React.FC = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const dateStart = useSelector(selectDateStart);
   const started = dateStart !== "";
   const interval = useRef<number>(0);

@@ -81,13 +81,15 @@ export const createUserEvent =
   (): ThunkAction<
     Promise<void>,
     RootState,
-    undefined,
+    unknown,
     CreateRequestAction | CreateSuccessAction | CreateFailureAction
   > =>
   async (dispatch, getState) => {
     dispatch({
       type: CREATE_REQUEST,
     });
+
+    console.log("trying to create an event");
 
     try {
       const dateStart = selectDateStart(getState());
