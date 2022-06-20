@@ -20,7 +20,6 @@ export const stop = (): StopAction => ({
 });
 
 export const selectRecorderState = (rootState: RootState) => {
-  console.log(rootState.recorder);
   return rootState.recorder;
 };
 export const selectDateStart = (rootState: RootState) => selectRecorderState(rootState).dateStart;

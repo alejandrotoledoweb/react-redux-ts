@@ -106,7 +106,6 @@ export const createUserEvent =
       });
 
       const createdEvent: UserEvent = await response.json();
-      console.log({ createdEvent });
 
       dispatch({
         type: CREATE_SUCCESS,
