@@ -4,6 +4,7 @@ import "./Calendar.css";
 import { RootState } from "../../redux/store";
 import { selectUserEventsArray, loadUserEvents, UserEvent } from "../../redux/user-events";
 import { addZero } from "../../lib/utils";
+import { EventItem } from "./EventItem";
 
 const mapState = (state: RootState) => ({
   events: selectUserEventsArray(state),
@@ -22,7 +23,7 @@ interface Props extends PropsFromRedux {}
 const createDateKey = (date: Date) => {
   const year = date.getUTCFullYear();
   const month = date.getUTCMonth() + 1;
-  const day = date.getUTCDate();
+  const day = date.getUTCDate() + 1;
   return `${year}-${addZero(month)}-${addZero(day)}`;
 };
 
@@ -83,15 +84,7 @@ const Calendar: React.FC<Props> = ({ events, loadUserEvents }) => {
             </div>
             <div className="calendar-events">
               {events.map((event) => {
-                return (
-                  <div className="calendar-event" key={dayKey}>
-                    <div className="calendar-event-info">
-                      <div className="calendar-event-time">10:00 - 12:00</div>
-                      <div className="calendar-event-title">{event.title}</div>
-                    </div>
-                    <button className="calendar-event-delete-button">&times;</button>
-                  </div>
-                );
+                return <EventItem event={event} key={event.id} />;
               })}
             </div>
           </div>

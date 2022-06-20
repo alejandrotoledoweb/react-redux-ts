@@ -89,8 +89,6 @@ export const createUserEvent =
       type: CREATE_REQUEST,
     });
 
-    console.log(getState());
-
     try {
       const dateStart = selectDateStart(getState());
       const event: Omit<UserEvent, "id"> = {
@@ -191,10 +189,6 @@ const userEventsReducer = (
 
     case CREATE_SUCCESS: {
       const { event } = action.payload;
-
-      const testAllIds = [...state.allIds, event.id];
-      const testByIds = { ...state.byIds, [event.id]: event };
-      console.log({ testAllIds, testByIds });
       return {
         ...state,
         allIds: [...state.allIds, event.id],

@@ -19,8 +19,10 @@ export const stop = (): StopAction => ({
   type: STOP,
 });
 
-export const selectRecorderState = (rootState: RootState): RecorderState => rootState.recorder;
-
+export const selectRecorderState = (rootState: RootState) => {
+  console.log(rootState.recorder);
+  return rootState.recorder;
+};
 export const selectDateStart = (rootState: RootState) => selectRecorderState(rootState).dateStart;
 
 const initialState: RecorderState = {
@@ -30,15 +32,11 @@ const initialState: RecorderState = {
 const recorderReducer = (state: RecorderState = initialState, action: StartAction | StopAction) => {
   switch (action.type) {
     case START:
-      return {
-        ...state,
-        dateStart: new Date().toISOString(),
-      };
+      return { ...state, dateStart: new Date().toISOString() };
+
     case STOP:
-      return {
-        ...state,
-        dateStart: "",
-      };
+      return { ...state, dateStart: "" };
+
     default:
       return state;
   }

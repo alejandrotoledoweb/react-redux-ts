@@ -17,8 +17,8 @@ const Recorder: React.FC = () => {
   const handleClick = () => {
     if (started) {
       window.clearInterval(interval.current);
-      dispatch(stop());
       dispatch(createUserEvent());
+      dispatch(stop());
     } else {
       dispatch(start());
       interval.current = window.setInterval(() => {

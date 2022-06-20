@@ -1,12 +1,6 @@
 {
   "events": [
     {
-      "id": 1,
-      "title": "Jogging",
-      "dateStart": "2022-06-13T20:08:23.101Z",
-      "dateEnd": "2022-06-13T21:08:23.101Z"
-    },
-    {
       "id": 2,
       "title": "swimming",
       "dateStart": "2022-06-15T21:08:23.101Z",
@@ -14,39 +8,9 @@
     },
     {
       "title": "No name",
-      "dateStart": "",
-      "dateEnd": "2022-06-17T20:12:32.178Z",
+      "dateStart": "2022-06-20T17:56:20.073Z",
+      "dateEnd": "2022-06-20T17:56:21.949Z",
       "id": 3
-    },
-    {
-      "title": "No name",
-      "dateStart": "",
-      "dateEnd": "2022-06-17T20:13:36.002Z",
-      "id": 4
-    },
-    {
-      "title": "No name",
-      "dateStart": "",
-      "dateEnd": "2022-06-17T20:17:30.573Z",
-      "id": 5
-    },
-    {
-      "title": "No name",
-      "dateStart": "",
-      "dateEnd": "2022-06-17T20:20:01.248Z",
-      "id": 6
-    },
-    {
-      "title": "No name",
-      "dateStart": "",
-      "dateEnd": "2022-06-17T20:21:59.342Z",
-      "id": 7
-    },
-    {
-      "title": "No name",
-      "dateStart": "",
-      "dateEnd": "2022-06-17T20:35:48.986Z",
-      "id": 8
     }
   ]
 }
