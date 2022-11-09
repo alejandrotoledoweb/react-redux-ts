@@ -87,7 +87,7 @@ export const createUserEvent =
       const event: Omit<UserEvent, "id"> = {
         title: "No name",
         dateStart,
-        dateEnd: new Date().toISOString(),
+        dateEnd: new Date().toString(),
       };
 
       const response = await fetch(`http://localhost:3001/events`, {

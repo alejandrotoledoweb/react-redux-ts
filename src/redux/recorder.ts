@@ -3,6 +3,7 @@ import { RootState } from "./store";
 
 interface RecorderState {
   dateStart: string;
+  dateStop: string;
 }
 
 const START = "recorder/start";
@@ -26,12 +27,13 @@ export const selectDateStart = (rootState: RootState) => selectRecorderState(roo
 
 const initialState: RecorderState = {
   dateStart: "",
+  dateStop: "",
 };
 
 const recorderReducer = (state: RecorderState = initialState, action: StartAction | StopAction) => {
   switch (action.type) {
     case START:
-      return { ...state, dateStart: new Date().toISOString() };
+      return { ...state, dateStart: new Date().toString() };
 
     case STOP:
       return { ...state, dateStart: "" };

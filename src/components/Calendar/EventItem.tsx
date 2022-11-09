@@ -38,10 +38,15 @@ export const EventItem: React.FC<Props> = ({ event }) => {
     setEditable(false);
   };
 
+  const startTime = event.dateStart.slice(15, 24);
+  const endTime = event.dateEnd.slice(15, 24);
+
   return (
     <div className="calendar-event">
       <div className="calendar-event-info">
-        <div className="calendar-event-time">10:00 - 12:00</div>
+        <div className="calendar-event-time">
+          {startTime} - {endTime}
+        </div>
         <div className="calendar-event-title">
           {editable ? (
             <input
